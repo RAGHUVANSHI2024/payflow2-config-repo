@@ -1,0 +1,14 @@
+spring:
+  kafka:
+    bootstrap-servers: payflow-kafka:9092
+
+  datasource:
+    url: jdbc:mysql://payflow-mysql:3306/payflow_auth
+    username: root
+    password: mysql
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://payflow-eureka:8761/eureka
