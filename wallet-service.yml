@@ -2,22 +2,6 @@ server:
   port: 8083
 
 spring:
-  datasource:
-    url: jdbc:mysql://payflow-mysql:3306/payflow_wallet
-    username: root
-    password: mysql
-    driver-class-name: com.mysql.cj.jdbc.Driver
-
-  kafka:
-    bootstrap-servers: payflow-kafka:9092
-
-    producer:
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-
-      properties:
-        spring.json.add.type.headers: false
-
   jpa:
     hibernate:
       ddl-auto: update
@@ -28,14 +12,10 @@ spring:
       hibernate:
         format_sql: true
 
-  data:
-    redis:
-      host: payflow-redis
-      port: 6379
-      
-eureka:
-  client:
-    service-url:
-      defaultZone: http://payflow-eureka:8761/eureka
+  kafka:
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
-    
+    properties:
+      spring.json.add.type.headers: false
