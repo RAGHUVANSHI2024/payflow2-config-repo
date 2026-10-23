@@ -26,7 +26,3 @@ spring:
               predicates:
                 - Path=/api/v1/users/**
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://payflow-eureka:8761/eureka/
