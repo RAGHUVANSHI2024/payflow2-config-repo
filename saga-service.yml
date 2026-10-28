@@ -5,10 +5,4 @@ spring:
   application:
     name: saga-service
 
-  kafka:
-    bootstrap-servers: payflow-kafka:9092
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://payflow-eureka:8761/eureka/
